@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.educacionit</groupId>
+	<artifactId>tutorial_maven</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+	<name>tutorial_maven</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<log4j.version>2.13.0</log4j.version>
+	</properties>
+	<dependencies>
+		<!-- aqui debemos agregar todas la lib rerias que necesitamos en nuestro 
+			proyecto -->
+		<!-- o en sus modulos -->
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.13.0</version>
+			<optional>true</optional>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<modules>
+		<!-- dentro de modules definimos todos los proyectos hijos de mi proyecto -->
+		<!-- pom padre -->
+		<module>tutorial_maven_jar</module>
+
+		<module>tutorial_maven_webapp</module>
+	</modules>
+</project>
